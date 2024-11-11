@@ -1,8 +1,9 @@
 <h2>Edit Student</h2>
 
-<form action="{{ route('students.update', $student->id) }}" method="post">
-
+<form action="{{ route('students.update', $student->id) }}" method="POST">
     @csrf
+    @method('PUT')
+
     <label for="name">Name :</label>
     <input type="text" name="name" value="{{ $student->name }}">
     <label for="email">Email :</label>
